@@ -1,0 +1,264 @@
+/* Cấu hình chung */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+    to right,
+    #f86cef,
+    #bc6aef
+  ); /* Nền màu tím gradient */
+  color: #fff;
+}
+
+header {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.btk {
+  color: gray;
+  font-weight: bold;
+  margin: 0;
+  font-size: 40px; /* Đặt kích thước font Kiên IT lớn hơn */
+}
+
+/* Container chính */
+.container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 15px;
+}
+
+.profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  color: #000000;
+  border-radius: 10px;
+  padding: 30px;
+  flex-wrap: wrap; /* Cho phép các phần tử tự động xuống dòng trên màn hình nhỏ */
+}
+
+.avatar img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* Hình ảnh thanh toán bo góc 10px */
+.pay img {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Thông tin profile */
+.profile-info {
+  width: 400px; /* Đặt chiều rộng cố định */
+  height: auto;
+}
+
+.profile-info h2 {
+  font-size: 2.5rem; /* Đặt kích thước font cho tên trường lớn hơn */
+  margin-bottom: 10px;
+}
+
+.profile-info p {
+  width: 800px;
+  max-width: 100%;
+  min-width: 200px;
+  height: auto;
+}
+
+/* Tên trường */
+.school-info {
+  font-style: italic;
+  color: gray;
+  font-weight: bold;
+  font-size: 20px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Thông tin bên phải */
+.info-right {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Đảm bảo các phần tử đều nhau */
+  height: 150px; /* Cố định chiều cao */
+}
+
+.info-right p {
+  margin: 5px 0;
+}
+
+.info-right .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  font-size: 2rem;
+  margin: 0 10px;
+  transition: all 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+.highlight {
+  color: gray;
+  font-weight: bold;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.no-bullets {
+  list-style-type: none; /* Loại bỏ dấu chấm mặc định */
+  padding: 0; /* Loại bỏ khoảng cách thụt lề mặc định */
+  margin: 0;
+}
+
+/* Căn chỉnh và giãn cách các hàng */
+.reight-info ul.no-bullets {
+  list-style: none; /* Loại bỏ dấu chấm đầu dòng */
+  padding: 10px; /* Xóa khoảng cách bên trong ul */
+  margin: 0; /* Xóa khoảng cách bên ngoài ul */
+}
+
+.reight-info ul.no-bullets li {
+  margin-bottom: 10px; /* Tạo khoảng cách giữa các hàng */
+  display: flex; /* Đặt các biểu tượng và chữ trên cùng một dòng */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  font-size: 16px; /* Kích thước chữ */
+}
+
+/* Làm nổi bật chữ highlight */
+.highlight {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+/* Biểu tượng trong mỗi hàng */
+.reight-info ul.no-bullets li i {
+  margin-right: 10px; /* Tạo khoảng cách giữa icon và text */
+  color: gray; /* Màu icon nhẹ hơn */
+  font-size: 18px; /* Kích thước icon */
+}
+
+/* Loại bỏ dấu gạch dưới cho YouTube và GitHub */
+.social-icons .youtube,
+.social-icons .github {
+  text-decoration: none; /* Loại bỏ gạch dưới */
+}
+
+.social-icons a {
+  color: gray; /* Màu xám cho biểu tượng */
+}
+
+/* Hover effect cho từng biểu tượng */
+.social-icons .youtube:hover {
+  color: #ff0000; /* Màu đỏ khi hover */
+}
+
+.social-icons .facebook:hover {
+  color: #1c5af8;
+}
+
+.social-icons .tiktok:hover {
+  color: #000000;
+}
+
+.social-icons .github:hover {
+  color: #000000;
+}
+
+/* Responsive Design: Media Queries */
+
+/* Media query cho màn hình nhỏ hơn 768px */
+@media (max-width: 768px) {
+  /* Chuyển layout từ ngang sang dọc */
+  .profile {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Cải thiện kích thước font cho các phần tử */
+  .btk {
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .profile-info {
+    width: 100%;
+    text-align: center;
+  }
+
+  .profile-info h2 {
+    font-size: 2rem;
+  }
+
+  .social-icons a {
+    font-size: 1.5rem;
+  }
+
+  .pay img {
+    max-width: 100px;
+  }
+
+  /* Điều chỉnh kích thước icon trong các phần tử */
+  .reight-info ul.no-bullets li i {
+    font-size: 16px;
+  }
+
+  /* Đảm bảo nội dung không bị tràn trên màn hình nhỏ */
+  .profile-info p {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Media query cho màn hình rất nhỏ (điện thoại di động) */
+@media (max-width: 480px) {
+  /* Giảm kích thước font và hình ảnh */
+  .btk {
+    font-size: 25px;
+  }
+
+  .profile-info h2 {
+    font-size: 1.8rem;
+  }
+
+  .social-icons a {
+    font-size: 1.2rem;
+  }
+
+  .pay img {
+    max-width: 80px;
+  }
+
+  .reight-info ul.no-bullets li {
+    font-size: 14px;
+  }
+
+  .reight-info ul.no-bullets li i {
+    font-size: 14px;
+  }
+
+  /* Cải thiện hiển thị cho các phần tử */
+  .container {
+    padding: 10px;
+  }
+}

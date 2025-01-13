@@ -1,0 +1,120 @@
+/* Định dạng container chính */
+.content {
+  padding-top: 50px;
+  max-width: 1160px;
+  margin: 30px auto;
+  padding: 15px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7; /* Thêm màu nền nhẹ cho container */
+  border-radius: 10px;
+}
+
+/* Tiêu đề */
+.title {
+  text-align: left;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #333;
+  text-transform: uppercase; /* Làm cho tiêu đề nổi bật hơn */
+  letter-spacing: 2px; /* Tạo khoảng cách giữa các chữ cái */
+}
+
+/* Cấu trúc sản phẩm */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(250px, 1fr)
+  ); /* Grid tự động thay đổi số cột */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Thẻ sản phẩm */
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  text-align: center;
+  padding: 20px; /* Thêm khoảng cách bên trong thẻ sản phẩm */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Thêm hiệu ứng hover */
+}
+
+/* Thẻ sản phẩm khi hover */
+.product-card:hover {
+  transform: translateY(-10px); /* Di chuyển lên nhẹ khi hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Tạo bóng mờ cho thẻ khi hover */
+}
+
+/* Hình ảnh sản phẩm */
+.product-card img {
+  width: 100%; /* Chiều rộng chiếm toàn bộ */
+  height: 200px; /* Chiều cao cố định */
+  object-fit: cover; /* Đảm bảo hình ảnh không bị biến dạng */
+  border-radius: 8px; /* Bo góc hình ảnh */
+  transition: transform 0.3s ease; /* Thêm hiệu ứng cho hình ảnh */
+}
+
+/* Hình ảnh sản phẩm khi hover */
+.product-card:hover img {
+  transform: scale(1.05); /* Phóng to hình ảnh khi hover */
+}
+
+/* Tiêu đề sản phẩm */
+.product-title {
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0;
+  text-transform: capitalize;
+}
+
+/* Mô tả sản phẩm */
+.product-description {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 10px;
+  line-height: 1.5;
+  text-align: left;
+  max-height: 150px;
+  overflow: hidden;
+}
+
+/* Giá sản phẩm */
+.product-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ff5722;
+  margin-top: 10px;
+}
+
+/* Nút Mua ngay */
+.btn-buy {
+  background-color: #ff5722;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+/* Nút Mua ngay khi hover */
+.btn-buy:hover {
+  background-color: #e64a19;
+}
+
+/* Hiệu ứng khi hover vào nút Mua ngay */
+.btn-buy:active {
+  transform: scale(0.98); /* Giảm kích thước nút khi nhấn */
+}
